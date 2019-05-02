@@ -108,7 +108,69 @@ input, select, textarea {
 			-ms-transition: none !important;
 			transition: none !important;
 		}
+/* Resume job tasks */
+div.tasks  {
+	margin-top: -25px;
+	margin-bottom: -10px;
+}
+div.ulatina  {
+	margin-top: -10px;
+	margin-bottom: -20px;
+}
 
+div.tasks_spacing  {
+	margin-top: -10px;
+}
+
+.level{
+	font-size: 14px;
+	color: #bfbfbf;
+   }
+
+.date {
+ font-size: 13px;
+ color: #bfbfbf;
+}
+
+		/* Read more */
+.read-more-state {
+	display: none;
+  }
+ 
+  .read-more-target {
+	opacity: 0;
+	max-height: 0;
+	font-size: 0;
+	transition: .25s ease;
+  }
+  
+  .read-more-state:checked ~ .read-more-wrap .read-more-target {
+	opacity: 1;
+	font-size: inherit;
+	max-height: 999em;
+  }
+  
+  .read-more-state ~ .read-more-trigger:before {
+	content: 'Expand';
+  }
+  
+  .read-more-state:checked ~ .read-more-trigger:before {
+	content: '  H i d e ';
+  }
+  
+  .read-more-trigger {
+	cursor: pointer;
+	display: inline-block;
+	padding: 0 .5em;
+	width: 65px;
+	color: #ededed;
+	font-size: .7em;
+	line-height: 2;
+	border: 1px solid #ddd;
+	border-radius: .25em;
+	margin-top: 8px;
+  }
+  
 /* Type */
 
 	html {
@@ -910,71 +972,79 @@ input, select, textarea {
 
 /* Table */
 
-	.table-wrapper {
-		-webkit-overflow-scrolling: touch;
-		overflow-x: auto;
+.table-wrapper {
+	-webkit-overflow-scrolling: touch;
+	overflow-x: auto;
+}
+
+table {
+	margin: 0 0 2rem 0;
+	width: 100%;
+}
+
+table {
+	color: #ffffff;
+	font-size: 0.9em;
+	/* font-weight: 600; */
+	padding: 0 0.75em 0.75em 0.75em;
+	text-align: left;
+}
+
+table td {
+	padding: 0 0 1em;
+}
+
+	table.clean tbody tr {
+		border: solid 1px #ffffff;
+		border-left: 0;
+		border-right: 0;
 	}
 
-	table {
-		margin: 0 0 2rem 0;
-		width: 100%;
+		table.clean tbody tr:nth-child(2n + 1) {
+			background-color: rgba(255, 255, 255, 0.075);
+		}
+
+	table.clean td {
+		padding: 0.75em 0.75em;
 	}
 
-		table tbody tr {
+	table thead {
+		font-weight: 600;
+	}
+
+	table.clean thead {
+		border-bottom: solid 2px #ffffff;
+	}
+
+	table.clean tfoot {
+		border-top: solid 2px #ffffff;
+	}
+
+	table.alt {
+		border-collapse: separate;
+	}
+
+		table.alt tbody tr td {
 			border: solid 1px #ffffff;
-			border-left: 0;
-			border-right: 0;
+			border-left-width: 0;
+			border-top-width: 0;
 		}
 
-			table tbody tr:nth-child(2n + 1) {
-				background-color: rgba(255, 255, 255, 0.075);
+			table.alt tbody tr td:first-child {
+				border-left-width: 1px;
 			}
 
-		table td {
-			padding: 0.75em 0.75em;
+		table.alt tbody tr:first-child td {
+			border-top-width: 1px;
 		}
 
-		table th {
-			color: #ffffff;
-			font-size: 0.9em;
-			font-weight: 600;
-			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
+		table.alt thead {
+			border-bottom: 0;
 		}
 
-		table thead {
-			border-bottom: solid 2px #ffffff;
+		table.alt tfoot {
+			border-top: 0;
 		}
-
-		table tfoot {
-			border-top: solid 2px #ffffff;
-		}
-
-		table.alt {
-			border-collapse: separate;
-		}
-
-			table.alt tbody tr td {
-				border: solid 1px #ffffff;
-				border-left-width: 0;
-				border-top-width: 0;
-			}
-
-				table.alt tbody tr td:first-child {
-					border-left-width: 1px;
-				}
-
-			table.alt tbody tr:first-child td {
-				border-top-width: 1px;
-			}
-
-			table.alt thead {
-				border-bottom: 0;
-			}
-
-			table.alt tfoot {
-				border-top: 0;
-			}
 
 /* Button */
 
